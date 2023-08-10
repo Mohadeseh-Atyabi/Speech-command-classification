@@ -14,5 +14,15 @@ In this project, we used a custom CNN to process the raw data. Usually, more adv
 
 ![image](https://github.com/Mohadeseh-Atyabi/Speech-command-classification/assets/72689599/a830bf9b-ae42-45d1-8c71-648b516e4c53)
 
-The optimizer in this project is Adam having a learning rate of 0.01, and the scheduler function decrease it after 20 epochs to 0.001.
+The optimizer in this project is Adam having a learning rate of 0.01, and the scheduler function decrease it after 20 epochs to 0.001. We used cross-enthropy as the cost function.
+
 # Results
+The model is trained on the training dataset for 60 epochs with a batch size of 6, evaluating the weights using the validation dataset. The diagram of loss in each epoch for training data is shown below.
+
+![download](https://github.com/Mohadeseh-Atyabi/Speech-command-classification/assets/72689599/c2722ca6-81d1-40a8-a493-98a60b3c1aac)
+
+As you can see, the general flow of the loss is decreasing. The decreasing flow of the chart in continuous iterations demonstrates the appropriate functionality of the model. The accuracy for the test dataset is 88% which reports the model's high accuracy encountering new data. Another metric used to evaluate the model is the confusion matrix. In this matrix, the vertical axis shows the true label of the test data, and the horizontal axis showa the predicted label for the same data. The result is reported in the figure below.
+
+![download (1)](https://github.com/Mohadeseh-Atyabi/Speech-command-classification/assets/72689599/c7b8543d-c42c-44fe-91a0-a8a7ca0f382e)
+
+As expected, most of the data is located on the main diameter, which means that most of the labels are correctly recognized and few predictions are incorrect.
